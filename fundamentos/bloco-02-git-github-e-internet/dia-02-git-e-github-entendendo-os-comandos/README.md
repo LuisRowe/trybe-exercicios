@@ -1,0 +1,1 @@
+Nesse dia fizemos trabalho com clone, pull, push, pull request e merge. Incluindo problemas com branch's diferentes que se conflitaram no final.
