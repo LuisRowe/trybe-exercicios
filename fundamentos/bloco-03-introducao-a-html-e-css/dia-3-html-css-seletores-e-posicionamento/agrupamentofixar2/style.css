@@ -1,0 +1,7 @@
+div:hover {
+  border: 2px solid black;
+}
+
+div:nth-child(2n-1) {
+  font-style: italic;
+}
