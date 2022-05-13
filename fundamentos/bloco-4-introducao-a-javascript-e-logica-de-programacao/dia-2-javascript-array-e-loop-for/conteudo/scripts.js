@@ -1,21 +1,29 @@
 //Primeiro-Arrays
 
-let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-let menuServices = menu.indexOf("Serviços");
+// let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
+// let menuServices = menu.indexOf("Serviços");
 
-console.log(menuServices);
+// console.log(menuServices);
 
 //Segundo-Arrays
 
-let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-let indexOfPortfolio = menu.indexOf("Portfólio");
+// let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
+// let indexOfPortfolio = menu.indexOf("Portfólio");
 
-console.log(indexOfPortfolio);
+// console.log(indexOfPortfolio);
 
 //Terceiro-Arrays
 
-let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
+// let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
 
-menu.push("Contato");
+// menu.push("Contato");
 
-console.log(menu);
+// console.log(menu);
+
+//Primeiro-For
+
+// let groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia'];
+
+// for (let index = 0; index < groceryList.length; index += 1){
+//   console.log(groceryList[index]);
+// }
