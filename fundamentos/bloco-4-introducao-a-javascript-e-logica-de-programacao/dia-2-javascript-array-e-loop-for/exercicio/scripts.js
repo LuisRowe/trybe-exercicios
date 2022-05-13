@@ -74,13 +74,24 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 //7
 
-let menor = Number.POSITIVE_INFINITY;
+// let menor = Number.POSITIVE_INFINITY;
 
 
-for (let index = 0; index < numbers.length; index += 1){
-  if (numbers[index] < menor){
-    menor = numbers[index];
-  }
+// for (let index = 0; index < numbers.length; index += 1){
+//   if (numbers[index] < menor){
+//     menor = numbers[index];
+//   }
+// }
+
+// console.log(menor);
+
+//8
+
+let contar = [];
+let contarAte = 25;
+
+for (let index = 1; index <= contarAte; index +=1) {
+  contar.push(index);
 }
 
-console.log(menor);
+console.log(contar);
