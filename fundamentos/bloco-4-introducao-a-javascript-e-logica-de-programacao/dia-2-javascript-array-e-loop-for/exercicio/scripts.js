@@ -46,7 +46,7 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 //5
 
-// let maior = null;
+// let maior = Number.NEGATIVE_INFINITY;
 
 // for (let index = 0; index < numbers.length; index += 1){
 //   if (numbers[index] > maior){
@@ -58,16 +58,29 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 //6
 
-let impar = 0;
+// let impar = 0;
+
+// for (let index = 0; index < numbers.length; index += 1){
+//   if (numbers[index] % 2 == 1){
+//     impar += 1;
+//   }
+// }
+
+// if (impar == 0) {
+//   console.log("Nenhum valor ímpar encontrado")
+// } else {
+//   console.log(impar)
+// }
+
+//7
+
+let menor = Number.POSITIVE_INFINITY;
+
 
 for (let index = 0; index < numbers.length; index += 1){
-  if (numbers[index] % 2 == 1){
-    impar += 1;
+  if (numbers[index] < menor){
+    menor = numbers[index];
   }
 }
 
-if (impar == 0) {
-  console.log("Nenhum valor ímpar encontrado")
-} else {
-  console.log(impar)
-}
+console.log(menor);
