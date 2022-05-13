@@ -1,12 +1,12 @@
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
-//1
+//1 - percorre.
 
 // for (let index = 0; index < numbers.length; index += 1){
 //   console.log(numbers[index]);
 // }
 
-//2
+//2 - soma tudo.
 
 // let resultado = 0;
 
@@ -16,7 +16,7 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // console.log(resultado);
 
-//3
+//3 - média aritmética
 
 // let resultado = 0;
 
@@ -28,7 +28,7 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // console.log(media);
 
-//4
+//4 - verifica se a média é maior que 20.
 
 // let resultado = 0;
 
@@ -44,7 +44,7 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 //   console.log("Valor menor ou igual a 20")
 // }
 
-//5
+//5 - pegar o maior.
 
 // let maior = Number.NEGATIVE_INFINITY;
 
@@ -56,7 +56,7 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // console.log(maior);
 
-//6
+//6 - quantos impar tem.
 
 // let impar = 0;
 
@@ -72,7 +72,7 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 //   console.log(impar)
 // }
 
-//7
+//7 - pegar o menor.
 
 // let menor = Number.POSITIVE_INFINITY;
 
@@ -85,7 +85,7 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // console.log(menor);
 
-//8
+//8 - contar até.
 
 // let contar = [];
 // let contarAte = 25;
@@ -96,16 +96,16 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // console.log(contar);
 
-//9
+//9 - contar até e dividir um a um.
 
-let contar = [];
-let contarAte = 25;
+// let contar = [];
+// let contarAte = 25;
 
-for (let index = 1; index <= contarAte; index +=1) {
-  contar.push(index);
-}
+// for (let index = 1; index <= contarAte; index +=1) {
+//   contar.push(index);
+// }
 
-for (let index = 0; index < contar.length; index +=1){
-  let divisao = contar[index] / 2;
-  console.log(divisao);
-}
+// for (let index = 0; index < contar.length; index +=1){
+//   let divisao = contar[index] / 2;
+//   console.log(divisao);
+// }
