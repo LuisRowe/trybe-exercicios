@@ -25,23 +25,23 @@
 //Para fixar - for/in e for/of
 
 //1
-let names = {
-  person1: 'João',
-  person2: 'Maria',
-  person3: 'Jorge',
-};
+// let names = {
+//   person1: 'João',
+//   person2: 'Maria',
+//   person3: 'Jorge',
+// };
 
-for (let imprimir in names){
-  console.log("Olá " + names[imprimir]);
-}
+// for (let imprimir in names){
+//   console.log("Olá " + names[imprimir]);
+// }
 
-//2
-let car = {
-  model: 'A3 Sedan',
-  manufacturer: 'Audi',
-  year: 2020
-};
+// 2
+// let car = {
+//   model: 'A3 Sedan',
+//   manufacturer: 'Audi',
+//   year: 2020
+// };
 
-for (let key in car) {
-  console.log(key + " : " + car[key]);
-}
+// for (let key in car) {
+//   console.log(key + " : " + car[key]);
+// }
