@@ -20,4 +20,4 @@ console.log("A jogadora " + objeto.name + " " + objeto.lastName + " tem " + obje
 
 console.log("A jogadora " + objeto.name + " " + objeto.lastName + " foi eleita a melhor do mundo por " + objeto.bestInTheWorld.length + " vezes.")
 
-console.log
+console.log("A jogadora possui " + objeto.medals.golden + " medalhas de ouro e " + objeto.medals.silver + " medalhas de prata.")
