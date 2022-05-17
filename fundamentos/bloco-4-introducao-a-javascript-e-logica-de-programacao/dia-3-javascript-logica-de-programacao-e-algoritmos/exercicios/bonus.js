@@ -15,15 +15,15 @@
 
 // 2 Triangulo - Base N
 
-let estrela = "*";
-let estrelaNaLinha = "";
+// let estrela = "*";
+// let estrelaNaLinha = "";
 
-let linha = 5;
+// let linha = 5;
 
-for (let index = 0; index < linha; index += 1) {
-  estrelaNaLinha += estrela;
-  console.log(estrelaNaLinha);
-}
+// for (let index = 0; index < linha; index += 1) {
+//   estrelaNaLinha += estrela;
+//   console.log(estrelaNaLinha);
+// }
 
 // 3 Triangulo base n invertido
 
