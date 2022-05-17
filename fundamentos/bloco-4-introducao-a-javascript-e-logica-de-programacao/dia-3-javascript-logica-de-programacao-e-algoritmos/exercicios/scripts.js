@@ -25,21 +25,17 @@
 
 // let array = ['java', 'javascript', 'python', 'html', 'css'];
 // let maior = "";
-// let menor = "";
+// let menor = "***********";
 
 // for (let index = 0; index < array.length; index += 1){
 //   if (array[index].length > maior.length) {
 //     maior = array[index];
 //   }
-// }
-
-// for (let index = 0; index < array.length; index += 1){
-//   if (array[index].length < maior.length) {
+//   if (array[index].length < menor.length) {
 //     menor = array[index];
 //   }
 // }
 
-// console.log(array[1].length)
 // console.log("A maior palavra é: " + maior);
 // console.log("A menor palavra é: " + menor);
 
