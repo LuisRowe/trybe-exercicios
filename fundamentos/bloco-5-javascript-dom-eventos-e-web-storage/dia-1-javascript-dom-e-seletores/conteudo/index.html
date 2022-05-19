@@ -3,9 +3,9 @@
   <body>
     <header>
       <h2 id="page-title">Título</h2>
-      <p id="paragraph">Dê uma cor para este parágrafo!</p>
+      <p id="paragraph" class="paragrafo">Dê uma cor para este parágrafo!</p>
       <h4 id="subtitle">Subtítulo</h4>
-      <p id="second-paragraph">Segundo parágrafo!</p>
+      <p id="second-paragraph" class="paragrafo">Segundo parágrafo!</p>
     </header>
     <script>
       const paragraph = document.getElementById("paragraph");
@@ -13,6 +13,10 @@
       document.getElementById("page-title").innerText = "Harry Potter";
       document.getElementById("second-paragraph").innerText = "Sou muito criativo!";
       document.getElementById("subtitle").innerText = "Alterei também!!";
+
+      document.getElementsByClassName("paragrafo")[0].style.color = "#ff0000";
+
+      document.getElementsByTagName("h4")[0].style.color = "#0000ff";
     </script>
   </body>
 </html>
