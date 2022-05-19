@@ -47,13 +47,57 @@
         - document.getElementById()
         - document.getElementsByClassName()
         - document.getElementsByTagName()
- Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
- Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
- Crie uma função que mude a cor do quadrado vermelho para branco.
- Crie uma função que corrija o texto da tag <h1>.
- Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
- Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
+      // Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+      function daquiDoisAnos(tag) {
+        let futuro = document.getElementsByTagName(tag);
+        for (let index = 0; index < futuro.length; index += 1) {
+          futuro[index].innerText = "Empregado e feliz.";
+        }
+      }
+      daquiDoisAnos("p");
+
+      // Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+      function mudaQuadradoVerde(verde) {
+        document.getElementsByClassName(verde)[0].style.background = "rgb(76,164,109)";
+        
+      }
+      mudaQuadradoVerde("main-content");
+
+      // Crie uma função que mude a cor do quadrado vermelho para branco.
+      function mudaQuadradoVermelho(retangulo) {
+        document.getElementsByClassName(retangulo)[0].style.background = "white";
+        
+      }
+      mudaQuadradoVermelho("center-content");
+
+      // Crie uma função que corrija o texto da tag <h1>.
+      function corrigeTitulo() {
+        let titulo = document.getElementsByTagName("h1");
+        for (let index = 0; index < titulo.length; index += 1) {
+          titulo[index].innerText = "Corrigido";
+        }
+      }
+      corrigeTitulo();
+
+      // Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+      function maiusculo(frase) {
+        let maisc = document.getElementsByTagName(frase);
+        for (let index = 0; index < maisc.length; index += 1) {
+          maisc[index].innerText = maisc[index].innerText.toUpperCase();
+        }
+      }
+      maiusculo("p");
+      
+      // Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+      function imprimir(tinta) {
+        let impressao = document.getElementsByTagName(tinta);
+        for (let index = 0; index < impressao.length; index += 1) {
+          console.log(impressao[index].innerText);
+        }
+      }
+      imprimir("p");
+
     </script>
   </body>
 </html>
