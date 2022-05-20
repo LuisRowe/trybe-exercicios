@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho"></section>
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho"></section>
+        <section id="segundoEUltimoFilhoDoFilho"></section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho"></section>
+      <section id="quartoEUltimoFilho"></section>
+    </section>
+  </main>
+  <script>
+    // 1 - Acesse o elemento elementoOndeVoceEsta.
+    console.log(document.querySelector("#elementoOndeVoceEsta"));
+
+    // 2 - Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+    document.querySelector("#elementoOndeVoceEsta").parentNode.style.color = "red";
+
+    // 3 - Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+    document.querySelector("#elementoOndeVoceEsta").firstChild.textContent = "Exercício 3 - adicionei texto";
+
+    //4 Acesse o primeiroFilho a partir de pai.
+    console.log(document.querySelector("#pai").firstElementChild);
+
+    //5 Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+    console.log(document.querySelector("#elementoOndeVoceEsta").previousElementSibling);
+
+    //6 Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+    console.log(document.querySelector("#elementoOndeVoceEsta").nextSibling);
+
+    //7 - Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+    console.log(document.querySelector("#elementoOndeVoceEsta").nextElementSibling);
+
+    // 8 - Agora acesse o terceiroFilho a partir de pai.
+    let terceiroFilho = document.querySelector("#pai").children;
+    console.log(terceiroFilho[2]);
+
+    //9 - Crie um irmão para elementoOndeVoceEsta.
+    let pai = document.querySelector("#pai");
+    let paragrafoNoPai = document.createElement("p");
+    paragrafoNoPai.innerText = "Criei esse parágrafo com Create Element.";
+    pai.appendChild(paragrafoNoPai);
+
+    //10 - Crie um filho para elementoOndeVoceEsta.
+    let elementoOndeVoceEsta = document.querySelector("#elementoOndeVoceEsta");
+    console.log(elementoOndeVoceEsta);
+    let filhoElementoOndeVoceEsta = document.createElement("p");
+    filhoElementoOndeVoceEsta.innerText = "Criei esse parágrafo filho de onde tava com Create Element.";
+    elementoOndeVoceEsta.appendChild(filhoElementoOndeVoceEsta);
+
+    //11 - Crie um filho para primeiroFilhoDoFilho.
+    let primeiroFilho = document.querySelector("#primeiroFilho");
+    console.log(primeiroFilho);
+    let filhoPrimeiroFilho = document.createElement("p");
+    filhoPrimeiroFilho.className = "filho-do-primeiro-filho";
+    filhoPrimeiroFilho.innerText = "Criei esse parágrafo filho do primeiro filho tava com Create Element.";
+    primeiroFilho.appendChild(filhoPrimeiroFilho);
+
+    //12 - A partir desse filho criado, acesse terceiroFilho.
+    let terceiroFilhoDoFilhoCriado = document.querySelector(".filho-do-primeiro-filho"). parentNode.parentNode.children;
+    console.log(terceiroFilhoDoFilhoCriado[2]);
+
+    //13 - Remova todos os elementos filhos de paiDoPai exceto pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
+    let filhoDoPai = document.querySelector("#pai").children;
+    let compara = document.querySelector("#elementoOndeVoceEsta")
+    for (let index = filhoDoPai.length-1; index >= 0; index -= 1) {
+      if (filhoDoPai[index] !== compara) {
+        filhoDoPai[index].remove();
+      }
+    }
+
+    let filhosElementoOndeVoceEsta = document.querySelector("#elementoOndeVoceEsta").children;
+    let compara2 = document.getElementById("primeiroFilhoDoFilho")
+    console.log(compara2);
+    
+    for (let index = filhosElementoOndeVoceEsta.length-1; index >= 0; index -= 1) {
+      if (filhosElementoOndeVoceEsta[index] !== compara2) {
+        filhosElementoOndeVoceEsta[index].remove();
+      }
+    }
+
+  </script>
+</body>
+</html>
