@@ -62,6 +62,61 @@
       let h1 = document.createElement("h1");
       h1.innerText = "Exercício 5.2 - JavaScript DOM";
       body.appendChild(h1);
+
+      // 2 - Adicione a tag main com a classe main-content como filho da tag body;
+      let main = document.createElement("main");
+      main.className = "main-content";
+      body.appendChild(main);
+
+      // 3 - Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+      let sectionCenter = document.createElement("section");
+      sectionCenter.className = "center-content";
+      main.appendChild(sectionCenter);
+
+      // 4 - Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+      let p = document.createElement("p");
+      p.innerText = "Algum texto";
+      sectionCenter.appendChild(p);
+
+      //5 - Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+      let sectionLeft = document.createElement("section");
+      sectionLeft.className = "left-content";
+      main.appendChild(sectionLeft);
+
+      // 6 - Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+      let sectionRight = document.createElement("section");
+      sectionRight.className = "right-content";
+      main.appendChild(sectionRight);
+
+      // 7 - Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+      let image = document.createElement("img");
+      image.className = "small-image";
+      image.setAttribute("src", "https://picsum.photos/200");
+      sectionLeft.appendChild(image);
+
+      // 8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+      let ul = document.createElement("ul");
+      ul.className = "lista-nao-ordenada";
+      sectionRight.appendChild(ul);
+
+      let lista = document.querySelector(".lista-nao-ordenada");
+
+      let li = 1;
+
+      for (let index = 1; index <= 10; index += 1) {
+        li = document.createElement("li");
+        li.innerText = index;
+        lista.appendChild(li);
+                
+      }
+
+      // 9 - 🚀 Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+      for (let index = 0; index < 3; index += 1) {
+        let h3 = document.createElement("h3");
+        h3.innerText = "h3";
+        main.appendChild(h3);          
+      }
+
     </script>
   </body>
 </html>
