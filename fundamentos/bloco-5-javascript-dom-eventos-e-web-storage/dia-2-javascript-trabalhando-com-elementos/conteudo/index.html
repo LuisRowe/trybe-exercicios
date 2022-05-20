@@ -70,10 +70,23 @@
     let terceiroFilhoDoFilhoCriado = document.querySelector(".filho-do-primeiro-filho"). parentNode.parentNode.children;
     console.log(terceiroFilhoDoFilhoCriado[2]);
 
+    //13 - Remova todos os elementos filhos de paiDoPai exceto pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
+    let filhoDoPai = document.querySelector("#pai").children;
+    for (let index = 0; index <= filhoDoPai.length; index += 1) {
+      let exclusao = filhoDoPai[index];
+      if (filhoDoPai !== document.querySelector("#elementoOndeVoceEsta")) {
+        pai.removeChild(filhoDoPai[index]);
+      }
+    }
 
-
-
-
+    let filhosElementoOndeVoceEsta = document.querySelector("#elementoOndeVoceEsta").children;
+    console.log(filhosElementoOndeVoceEsta);
+    for (let index = 0; index <= filhosElementoOndeVoceEsta.length; index += 1) {
+      let exclusao = filhosElementoOndeVoceEsta[index];
+      if (filhosElementoOndeVoceEsta !== document.querySelector("#primeiroFilhoDoFilho")) {
+        elementoOndeVoceEsta.removeChild(filhosElementoOndeVoceEsta[index]);
+      }
+    }
 
   </script>
 </body>
