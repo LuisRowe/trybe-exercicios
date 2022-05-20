@@ -72,19 +72,20 @@
 
     //13 - Remova todos os elementos filhos de paiDoPai exceto pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
     let filhoDoPai = document.querySelector("#pai").children;
-    for (let index = 0; index <= filhoDoPai.length; index += 1) {
-      let exclusao = filhoDoPai[index];
-      if (filhoDoPai !== document.querySelector("#elementoOndeVoceEsta")) {
-        pai.removeChild(filhoDoPai[index]);
+    let compara = document.querySelector("#elementoOndeVoceEsta")
+    for (let index = filhoDoPai.length-1; index >= 0; index -= 1) {
+      if (filhoDoPai[index] !== compara) {
+        filhoDoPai[index].remove();
       }
     }
 
     let filhosElementoOndeVoceEsta = document.querySelector("#elementoOndeVoceEsta").children;
-    console.log(filhosElementoOndeVoceEsta);
-    for (let index = 0; index <= filhosElementoOndeVoceEsta.length; index += 1) {
-      let exclusao = filhosElementoOndeVoceEsta[index];
-      if (filhosElementoOndeVoceEsta !== document.querySelector("#primeiroFilhoDoFilho")) {
-        elementoOndeVoceEsta.removeChild(filhosElementoOndeVoceEsta[index]);
+    let compara2 = document.getElementById("primeiroFilhoDoFilho")
+    console.log(compara2);
+    
+    for (let index = filhosElementoOndeVoceEsta.length-1; index >= 0; index -= 1) {
+      if (filhosElementoOndeVoceEsta[index] !== compara2) {
+        filhosElementoOndeVoceEsta[index].remove();
       }
     }
 
