@@ -6,6 +6,8 @@ body {
   margin: 0 auto;
   width: 100%;
   background: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 #header {
@@ -24,7 +26,8 @@ body {
 
 #navigation ul {
   display: flex;
-  margin: 0;
+  max-width: 50%;
+  margin: 0 5px;
   padding: 0;
 }
 
@@ -47,19 +50,29 @@ body {
 #content-container {
   width: 100%;
   background: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 60%;
-  padding: 20px 0;
-  margin: 0 0 0 4%;
+  width: 90%;
+  padding: 0 0;
+  margin: 5px;
 }
 
 #content h2 {
   margin: 0;
+}
+
+img {
+  width: 80%;
+  max-width: 600px;
+  align-self: center;
+
 }
 
 #aside {
@@ -77,4 +90,52 @@ body {
   text-align: right;
   padding: 20px;
   height: 1%;
+}
+
+@media print {
+  #header, #header h1, nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+  }
+
+  nav {
+    position: absolute;
+    top: 77px;
+    display: flex;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    display: flex;
+  }
+
+  #navigation li a {
+    text-decoration: none;
+    border-right: none;
+  }
+
+  main {
+    margin-top: 165px;
+  }
+
+  #aside {
+    display: none;
+  }
+
+  img {
+    width: 80%;
+  }
 }
