@@ -1,0 +1,159 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  margin: 0 50px;
+  list-style: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 10px;
+  max-width: 30%;
+}
+
+article h1 {
+  text-align: center;
+}
+
+article p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    margin: 0 15px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header p {
+    text-align: center;
+    font-weight: bold;
+  }
+
+    nav ul {
+    justify-content: space-between;
+  }
+
+  .aside-two ul{
+    font-weight: bold;
+  }
+
+  article h1 {
+    font-size: 22px;   
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 900px) {
+  body {
+    margin: 0 30px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: pink;
+  }
+
+  header p {
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  nav ul {
+    flex-direction: column;
+    font-size: 25px;
+  }
+
+  .aside-two ul{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+    justify-content: space-around;
+  }
+
+  .aside-two ul li {
+    margin: 15px 15px;
+    width: 40%;
+  }
+
+  article h1 {
+    font-size: 30px;
+  }
+
+  article p {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (min-width: 901px) {
+
+  body {
+    margin: 0 50px;
+  }
+
+  header {
+    margin: 15px 50px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header p {
+    font-size: 48px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    font-size: 30px;
+  }
+
+  .aside-one ul{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+    justify-content: space-around;
+  }
+
+  .aside-one ul li {
+    margin: 15px 15px;
+    width: 40%;
+  }
+
+  .aside-two ul{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+    justify-content: space-around;
+  }
+
+  .aside-two ul li {
+    margin: 15px 15px;
+    width: 40%;
+  }
+
+  article h1 {
+    font-size: 38px;
+  }
+
+  article p {
+    font-size: 1.6em;
+  }
+}
