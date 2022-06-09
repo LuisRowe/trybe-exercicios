@@ -1,7 +1,6 @@
 let oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
 function ordenar(array) {
-
   let arrumar = [];
   let guardado = 0;
   for (let index = 0; index < array.length; index += 1) {
@@ -23,7 +22,10 @@ console.log(`Os números ${oddsAndEvens} se encontram ordebados de forma crescen
 // Utilizando array.sort
 
 let oddsAndEvensSort = [13, 3, 4, 10, 7, 2];
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-oddsAndEvensSort = oddsAndEvensSort.sort((a, b) => a - b); 
 
-console.log(oddsAndEvensSort);
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+// oddsAndEvensSort = oddsAndEvensSort.sort((a, b) => a - b); 
+
+const numeros = arrayDeNumero => oddsAndEvensSort.sort((a, b) => a - b);
+
+console.log(numeros(oddsAndEvensSort));
