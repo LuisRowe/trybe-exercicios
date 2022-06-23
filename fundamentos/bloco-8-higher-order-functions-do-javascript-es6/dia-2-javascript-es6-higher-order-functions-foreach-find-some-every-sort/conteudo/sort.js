@@ -22,6 +22,12 @@ const people = [
 ];
 
 // Adicione se código aqui
-people.sort((a, b) => a.age - b.age); // Coloca o age no corpo da função, pois o a e b pega o item todo, ou seja o objeto.
+people.sort((a, b) => a.age - b.age); // Coloca o age no corpo da função, pois o a e b pega o item todo, ou seja o objeto, e o .age fala o valor necessário para a comparação.
+
+console.log(people);
+
+// Inverter a ordem de idades
+
+people.sort((a, b) => b.age - a.age)
 
 console.log(people);

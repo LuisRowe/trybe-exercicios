@@ -38,6 +38,7 @@ const people = [
   { name: 'Bruna', age: 19 },
 ];
 
+
 const verifyAges = (arr, minimumAge) => {
   //Adicione seu código aqui
   return arr.every((buscar) => buscar.age >= 18);
