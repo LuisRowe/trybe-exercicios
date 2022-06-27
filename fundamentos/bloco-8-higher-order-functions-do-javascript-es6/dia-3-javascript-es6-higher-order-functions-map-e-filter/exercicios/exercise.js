@@ -65,34 +65,34 @@ const books = [
 
 const formatedBookNames = (array) => array.map((elemento) => `${elemento.name} - ${elemento.genre} - ${elemento.author.name}`);
 
-// console.log(formatedBookNames(books)); volta nome em formato nomelivro - genero - nomeautor
+// console.log(formatedBookNames(books)); // volta nome em formato nomelivro - genero - nomeautor
 
 const nameAndAge = (array) => {
   const autor = array.map((elemento) => { return { age: elemento.releaseYear - elemento.author.birthYear, author: elemento.author.name}});
   return autor.sort((a, b) => a.age - b.age);
 }
 
-// console.log(nameAndAge(books)); Ordena livros por idade do autor quando publicou
+// console.log(nameAndAge(books)); // Ordena livros por idade do autor quando publicou
 
 const fantasyOrScienceFiction = (array) => array.filter((elemento) => elemento.genre === 'Fantasia' || elemento.genre === 'Ficção Científica');
 
-// console.log(fantasyOrScienceFiction(books)); volta livros de fantasia e ficção cientifica
+// console.log(fantasyOrScienceFiction(books)); // volta livros de fantasia e ficção cientifica
 
 const oldBooksOrdered = (array) => array.filter((elemento) => elemento.releaseYear < 2022 - 60).sort((a, b) => a.releaseYear - b.releaseYear);
 
-// console.log(oldBooksOrdered(books)); Livros com mais de 60 anos, em ordem do mais velho para mais novo.
+// console.log(oldBooksOrdered(books)); // Livros com mais de 60 anos, em ordem do mais velho para mais novo.
 
 const fantasyOrScienceFictionAuthors = (array) => array.filter((elemento) => elemento.genre === 'Fantasia' || elemento.genre === 'Ficção Científica').map((elemento) => elemento.author.name).sort();
 
-// console.log(fantasyOrScienceFictionAuthors(books)); Autores fantasia e ficção cientifica em ordem alfabética
+// console.log(fantasyOrScienceFictionAuthors(books)); // Autores fantasia e ficção cientifica em ordem alfabética
 
 const oldBooks = (array) => array.filter((elemento) => elemento.releaseYear < 2022 - 60).map((elemento) => elemento.name);
 
-// console.log(oldBooks(books)); Nome dos livros com mais de 60 anos.
+// console.log(oldBooks(books)); // Nome dos livros com mais de 60 anos.
 
 const authorWith3DotsOnName = (array)  => {
   const nomeAutores = array.map((element) => element.author.name);
   return nomeAutores.filter((elemento) => elemento[1] === '.' && elemento[4] === '.' && elemento[7] === '.');
 }
 
-// console.log(authorWith3DotsOnName(books)); Retorna autor com 3 nomes abreviados.
+console.log(authorWith3DotsOnName(books)); // Retorna autor com 3 nomes abreviados.
