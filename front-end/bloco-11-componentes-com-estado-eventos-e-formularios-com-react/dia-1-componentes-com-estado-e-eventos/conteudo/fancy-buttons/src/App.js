@@ -12,13 +12,6 @@ class App extends React.Component {
     }
   }
 
-  async contador(number) {
-    await this.setState((estadoAnterior, _props) => ({
-      numeroDeClick: estadoAnterior.numeroDeClick + number,
-    }))
-    this.mudaCorBotao();
-  }
-
   async mudaCorBotao() {
     if (this.state.numeroDeClick % 2 === 0) {
       await this.setState(() => ({
@@ -30,6 +23,13 @@ class App extends React.Component {
       })
     }
     console.log(this.state.corDoBotao);
+  }
+
+  async contador(number) {
+    await this.setState((estadoAnterior, _props) => ({
+      numeroDeClick: estadoAnterior.numeroDeClick + number,
+    }))
+    this.mudaCorBotao();
   }
 
   render(){
