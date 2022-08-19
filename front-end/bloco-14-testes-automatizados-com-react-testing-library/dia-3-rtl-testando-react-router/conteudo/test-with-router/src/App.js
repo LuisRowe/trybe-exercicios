@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+  import { Switch, Route, Link } from 'react-router-dom';
 
 export const About = () => <h1>Você está na página Sobre</h1>;
 export const Home = () => <h1>Você está na página Início</h1>;
@@ -14,7 +14,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
-        <Route exact path="*" component={NoMatch} />
+        <Route path="*" component={NoMatch} />
       </Switch>
     </div>
   );
