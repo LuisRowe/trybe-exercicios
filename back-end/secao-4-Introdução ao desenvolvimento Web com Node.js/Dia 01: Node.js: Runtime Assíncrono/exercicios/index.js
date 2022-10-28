@@ -13,7 +13,7 @@ function doMath(a, b, c) {
 
 const main = async () => {
   try {
-    const resultado = await doMath(1,9,6);
+    const resultado = await doMath(1,'1',6);
     console.log(resultado);
   } catch (error) {
     console.log(error.message);
