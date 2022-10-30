@@ -156,7 +156,7 @@ describe('Testando a API Cacau Trybe', function () {
 
       const response = await chai.request(app).get('/chocolates/search?name=ZZZ');
       expect(response.status).to.be.equal(404);
-      expect(response.body.chocolate).to.deep.equal(chocolatesVazio);
+      expect(response.body.chocolate).to.be.equal(chocolatesVazio);
     });
   });
 });

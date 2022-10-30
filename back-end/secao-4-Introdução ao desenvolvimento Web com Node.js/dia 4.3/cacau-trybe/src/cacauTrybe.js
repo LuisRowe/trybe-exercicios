@@ -22,6 +22,14 @@ const getChocolateById = async (id) => {
     .find((chocolate) => chocolate.id === id);
 };
 
+const getChocolateByName = async (name) => {
+  const cacauTrybe = await readCacauTrybeFile();
+  const nameToSearch = name.toLowerCase();
+  console.log(nameToSearch);
+  return cacauTrybe.chocolates
+    .filter((chocolate) => chocolate.names === id);
+};
+
 const getChocolatesByBrand = async (brandId) => {
   const cacauTrybe = await readCacauTrybeFile();
   return cacauTrybe.chocolates
@@ -32,4 +40,5 @@ module.exports = {
   getAllChocolates,
   getChocolateById,
   getChocolatesByBrand,
+  getChocolateByName,
 };
