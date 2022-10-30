@@ -11,6 +11,16 @@ const readCacauTrybeFile = async () => {
   }
 };
 
+const writeCacauTrybeFile = async () => {
+  try {
+    const completePath = join(__dirname, path);
+    await fs.writeFile(completePath, JSON.stringify(content));
+  } catch (e) {
+    console.error('Erro ao salvar o arquivo', e.message);
+    return null;
+  }
+};
+
 const getAllChocolates = async () => {
   const cacauTrybe = await readCacauTrybeFile();
   return cacauTrybe.chocolates;
@@ -36,9 +46,30 @@ const getChocolatesByBrand = async (brandId) => {
     .filter((chocolate) => chocolate.brandId === brandId);
 };
 
+const updateChocolate = async (id, update) => {
+  console.log(update);
+  const cacauTrybe = await readCacauTrybeFile();
+  const chocolateToUpdate = cacauTrybe.chocolates.find(
+    (chocolate) => chocolate.id === id,
+  );
+
+  if (chocolateToUpdate) {
+    cacauTrybe.chocolates = cacauTrybe.chocolates.map((chocolate) => {
+        if (chocolate.id === id) return { ...chocolate, ...update };
+        return chocolate;
+      });
+
+    await writeCacauTrybeFile(cacauTrybe);
+    return { ...chocolateToUpdate, ...update };
+  }
+
+  return false;
+};
+
 module.exports = {
   getAllChocolates,
   getChocolateById,
   getChocolatesByBrand,
   getChocolateByName,
+  updateChocolate,
 };

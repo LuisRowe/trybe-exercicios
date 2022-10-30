@@ -156,31 +156,39 @@ describe('Testando a API Cacau Trybe', function () {
 
       const response = await chai.request(app).get('/chocolates/search?name=ZZZ');
       expect(response.status).to.be.equal(404);
-      console.log(response.body);
       expect(response.body).to.deep.equal(chocolatesVazio);
     });
   });
 
   describe('Usando o método PUT em /chocolates/:id', function () {
     it('Verifica se o chocolate correto é atualizado, conforme id', async function () {
-      const chocolateNovo = [
-        { 
-          name: 'Mint Pretty Good',
-          brandId: 2,
-        },
-      ];
+      sinon.stub(fs.promises, 'writeFile')
+        .resolves(mockFile);
+      const chocolateNovo = { 
+        name: 'Mint Pretty Good',
+        brandId: 2,
+      };
+      
 
-      const response = await chai.request(app).put('/chocolates/1');
+      const chocolateNovoComId = { 
+        id: 1,
+        name: 'Mint Pretty Good',
+        brandId: 2,
+      };
+      
+
+      const response = await chai
+        .request(app)
+        .put('/chocolates/1')
+        .send(chocolateNovo);
       expect(response.status).to.be.equal(201);
-      expect(response.body).to.deep.equal(chocolateNovo);
+      expect(response.body).to.deep.equal({ chocolate: chocolateNovoComId });
     });
 
     it('Verifica se aparece erro caso não exista o id requerido', async function () {
-      const mensagemErro = [
-        { 
+      const mensagemErro = { 
           message: 'chocolate not found',
-        },
-      ];
+      };
 
       const response = await chai.request(app).put('/chocolates/555');
       expect(response.status).to.be.equal(404);
