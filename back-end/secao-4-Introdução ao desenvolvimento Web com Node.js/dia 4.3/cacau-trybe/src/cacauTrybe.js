@@ -25,9 +25,9 @@ const getChocolateById = async (id) => {
 const getChocolateByName = async (name) => {
   const cacauTrybe = await readCacauTrybeFile();
   const nameToSearch = name.toLowerCase();
-  console.log(nameToSearch);
-  return cacauTrybe.chocolates
-    .filter((chocolate) => chocolate.names === id);
+  const result = cacauTrybe.chocolates
+    .filter((chocolate) => chocolate.name.toLowerCase().includes(nameToSearch));
+  return result;
 };
 
 const getChocolatesByBrand = async (brandId) => {

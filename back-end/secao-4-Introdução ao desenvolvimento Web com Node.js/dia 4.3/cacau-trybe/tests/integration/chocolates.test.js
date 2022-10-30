@@ -148,7 +148,7 @@ describe('Testando a API Cacau Trybe', function () {
 
       const response = await chai.request(app).get('/chocolates/search?name=Mo');
       expect(response.status).to.be.equal(200);
-      expect(response.body.chocolate).to.deep.equal(chocolatesMo);
+      expect(response.body).to.deep.equal(chocolatesMo);
     });
 
     it('Retorna array vazio e status 404 caso não encontre as letras buscadas', async function () {
@@ -156,7 +156,8 @@ describe('Testando a API Cacau Trybe', function () {
 
       const response = await chai.request(app).get('/chocolates/search?name=ZZZ');
       expect(response.status).to.be.equal(404);
-      expect(response.body.chocolate).to.be.equal(chocolatesVazio);
+      console.log(response.body);
+      expect(response.body).to.deep.equal(chocolatesVazio);
     });
   });
 });
