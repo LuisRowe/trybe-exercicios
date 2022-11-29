@@ -6,8 +6,6 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-/** 
- * Substitua este comentário pelas suas rotas!
-*/
+app.get('/accounts/:id', account.getById);
 
 module.exports = app;
