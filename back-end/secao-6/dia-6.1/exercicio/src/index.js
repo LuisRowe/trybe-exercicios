@@ -10,6 +10,8 @@ const Book = require('./controllers/book.controller');
 
 app.get('/book', Book.getAll);
 
+app.get('/book/author', Book.getByAuthor);
+
 app.get('/book/:id', Book.getById);
 
 app.post('/book', Book.createBook);
