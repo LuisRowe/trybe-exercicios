@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Account = sequelize.define('account', {
+  const Account = sequelize.define('Account', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     email: DataTypes.STRING,
     password: DataTypes.STRING
@@ -10,14 +10,13 @@ module.exports = (sequelize, DataTypes) => {
   }); 
 
   Account.associate = (models) => {
-    Account.hasOne(models.Profile,
-      { foreignKey: 'accountId', as: 'accountsProfile' });
+    Account.hasOne(models.Profile, {
+      foreignKey: 'accountId',
+      as: 'profile',
+    });
+    Account.hasMany(models.Comment,
+      { foreignKey: 'accountId', as: 'comments' });
   };
 
-  Account.associate = (models) => {
-    Account.hasMany(models.Comment,
-      { foreignKey: 'accountId', as: 'accountsComment' });
-  };
- 
   return Account;
 };

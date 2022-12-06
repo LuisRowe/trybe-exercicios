@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Profile = sequelize.define('profile', {
+  const Profile = sequelize.define('Profile', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
@@ -13,8 +13,10 @@ module.exports = (sequelize, DataTypes) => {
   }); 
 
   Profile.associate = (models) => {
-    Profile.belongsTo(models.Account,
-      { foreignKey: 'accountId', as: 'accountsProfile' });
+    Profile.belongsTo(models.Account, {
+      foreignKey: 'accountId',
+      as: 'account',
+    });
   };
  
   return Profile;

@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Comment = sequelize.define('comment', {
+  const Comment = sequelize.define('Comment', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     message: DataTypes.STRING,
     upvoting: DataTypes.INTEGER,
@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Comment.associate = (models) => {
     Comment.belongsTo(models.Account,
-      { foreignKey: 'accountId', as: 'accounts' });
+      { foreignKey: 'accountId', as: 'accountsComment' });
   };
  
   return Comment;
