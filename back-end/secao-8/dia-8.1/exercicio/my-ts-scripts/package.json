@@ -1,5 +1,5 @@
 {
-  "name": "conteudo",
+  "name": "my-ts-scripts",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,5 +13,8 @@
     "@tsconfig/node16": "^1.0.3",
     "@types/node": "^18.11.11",
     "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
