@@ -9,8 +9,8 @@ interface Email {
 
 // ---
 
-class Cachorros {
-  constructor(parameters) {
-    
-  }
+class Person {
+  name: string;
+  height: string;
+  weight: string;
 }
